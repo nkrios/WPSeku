@@ -82,7 +82,7 @@ by Momo Outaadi (m4ll0k)
 
 ```
 
-### Scan PHP Code
+### Scan plugin,theme and wordpress code
 
 `python3 wpseku.py --scan <dir/file> --verbose`
 
