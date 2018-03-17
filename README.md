@@ -30,31 +30,24 @@ WPSeku - Wordpress Security Scanner
 by Momo Outaadi (m4ll0k)
 ----------------------------------------
 
-[ + ] Target: https://www.ehc.ma
+[ + ] Target: https://www.xxxxxxx.com
 [ + ] Starting: 02:38:51
 
 [ + ] Server: Apache
-[ + ] Uncommon header "X-Pingback" found, with contents: https://www.ehc.ma/xmlrpc.php
+[ + ] Uncommon header "X-Pingback" found, with contents: https://www.xxxxxxx.com/xmlrpc.php
 [ i ] Checking Full Path Disclosure...
 [ + ] Full Path Disclosure: /home/ehc/public_html/wp-includes/rss-functions.php
 [ i ] Checking wp-config backup file...
-[ + ] wp-config.php available at: https://www.ehc.ma/wp-config.php
+[ + ] wp-config.php available at: https://www.xxxxxxx.com/wp-config.php
 [ i ] Checking common files...
-[ + ] robots.txt file was found at: https://www.ehc.ma/robots.txt
-[ + ] xmlrpc.php file was found at: https://www.ehc.ma/xmlrpc.php
-[ + ] readme.html file was found at: https://www.ehc.ma/readme.html
+[ + ] robots.txt file was found at: https://www.xxxxxxx.com/robots.txt
+[ + ] xmlrpc.php file was found at: https://www.xxxxxxx.com/xmlrpc.php
+[ + ] readme.html file was found at: https://www.xxxxxxx.com/readme.html
 [ i ] Checking directory listing...
-[ + ] Dir "/wp-admin/css" listing enable at: https://www.ehc.ma/wp-admin/css/
-[ + ] Dir "/wp-admin/images" listing enable at: https://www.ehc.ma/wp-admin/images/
-[ + ] Dir "/wp-admin/includes" listing enable at: https://www.ehc.ma/wp-admin/includes/
-[ + ] Dir "/wp-admin/js" listing enable at: https://www.ehc.ma/wp-admin/js/
-[ + ] Dir "/wp-content/uploads" listing enable at: https://www.ehc.ma/wp-content/uploads/
-[ + ] Dir "/wp-includes/" listing enable at: https://www.ehc.ma/wp-includes/
-[ + ] Dir "/wp-includes/js" listing enable at: https://www.ehc.ma/wp-includes/js/
-[ + ] Dir "/wp-includes/Text" listing enable at: https://www.ehc.ma/wp-includes/Text/
-[ + ] Dir "/wp-includes/css" listing enable at: https://www.ehc.ma/wp-includes/css/
-[ + ] Dir "/wp-includes/images" listing enable at: https://www.ehc.ma/wp-includes/images/
-
+[ + ] Dir "/wp-admin/css" listing enable at: https://www.xxxxxxx.com/wp-admin/css/
+[ + ] Dir "/wp-admin/images" listing enable at: https://www.xxxxxxx.com/wp-admin/images/
+[ + ] Dir "/wp-admin/includes" listing enable at: https://www.xxxxxxx.com/wp-admin/includes/
+[ + ] Dir "/wp-admin/js" listing enable at: https://www.xxxxxxx.com/wp-admin/js/
 ```
 
 ## Credits and Contributors
