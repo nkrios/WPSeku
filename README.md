@@ -15,7 +15,7 @@ $ python3 wpseku.py
 ## Usage
 ### Generic Scan
 
-`python3 wpseku.py --url http://www.site.com --verbose`
+`python3 wpseku.py --url https://www.xxxxxxx.com --verbose`
 
 * __Output__
 
@@ -48,6 +48,38 @@ by Momo Outaadi (m4ll0k)
 [ + ] Dir "/wp-admin/images" listing enable at: https://www.xxxxxxx.com/wp-admin/images/
 [ + ] Dir "/wp-admin/includes" listing enable at: https://www.xxxxxxx.com/wp-admin/includes/
 [ + ] Dir "/wp-admin/js" listing enable at: https://www.xxxxxxx.com/wp-admin/js/
+......
+```
+### Bruteforce Login
+
+`python3 wpseku.py --url https://www.xxxxxxx.com --brute --user test --wordlist wl.txt --verbose`
+
+* __Output__
+
+```
+----------------------------------------
+ _ _ _ ___ ___ ___| |_ _ _ 
+| | | | . |_ -| -_| '_| | |
+|_____|  _|___|___|_,_|___|
+      |_|             v0.4.0
+
+WPSeku - Wordpress Security Scanner
+by Momo Outaadi (m4ll0k)
+----------------------------------------
+
+[ + ] Target: https://www.xxxxxxx.com
+[ + ] Starting: 02:46:32
+
+[ + ] Bruteforcing Login via XML-RPC...
+[ i ] Setting user: test
+[ + ] Valid Credentials: 
+
+-----------------------------
+| Username | Passowrd       |
+-----------------------------
+| ncshell  | kamperasqen131 |
+-----------------------------
+
 ```
 
 ## Credits and Contributors
