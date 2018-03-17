@@ -13,8 +13,12 @@ $ pip3 install -r requirements.txt
 $ python3 wpseku.py
 ```
 ## Usage
+### Generic Scan
+
 `python3 wpseku.py --url http://www.site.com --verbose`
-__Output__
+
+*__Output__
+
 ```
 ```
 
