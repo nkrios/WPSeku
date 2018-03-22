@@ -4,7 +4,8 @@
 # WPSeku - Wordpress Security Scanner
 # by Momo Outaadi (m4ll0k)
 
-from json import loads
+from json import loads, decoder
+import sys
 from lib.check import *
 from lib.request import * 
 from lib.printer import *
@@ -60,9 +61,12 @@ class wpusers(Request):
 		url = Path(self.url,'/?rest_route=/wp/v2/users')
 		resp = self.send(url=url,method="GET")
 		if resp.status_code == 200:
-			json = loads(resp.content,encoding="utf-8")
-			for x in range(len(json)):
-				users.append((json[x]['name'],json[x]['slug']))
+			try:
+				json = loads(resp.content,encoding="utf-8")
+				for x in range(len(json)):
+				    users.append((json[x]['name'],json[x]['slug']))
+			except json.decoder.JSONDecodeError:
+				pass            
 		return users
 
 	def wpfeed(self):

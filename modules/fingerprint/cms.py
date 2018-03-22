@@ -12,7 +12,7 @@ def wordpress(headers,content):
 	_cms_ |= search(decode('<meta name="generator" content="WordPress.com" />'),content) is not None
 	_cms_ |= search(decode('<a href="http://www.wordpress.com">Powered by WordPress</a>'),content) is not None
 	_cms_ |= search(decode('<link rel=\'https://api.w.org/\''),content) is not None
-	_cms_ |= search(decode('/wp-content/plugins/|/wp-admin/admin-ajax.php'),content) is not None
+	_cms_ |= search(decode('\\?\/wp-content\\?\/plugins\/|\\?\/wp-admin\\?\/admin-ajax.php'),content) is not None
 	if _cms_:
 		return "wordpress"
 
