@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-# WPSeku - Wordpress Security Scanner
-# by Momo Outaadi (m4ll0k)
-
-from lib.request import * 
+"""Support for discovering Wordpress themes."""
+from lib.request import *
 from lib.printer import *
 from lib.check import *
 from json import loads

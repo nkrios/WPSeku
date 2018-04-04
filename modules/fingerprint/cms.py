@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-# WPSeku - Wordpress Security Scanner
-# by Momo Outaadi (m4ll0k)
-
+"""Support for fingerprinting CMS."""
 from re import search,I
 from lib.printer import *
 
