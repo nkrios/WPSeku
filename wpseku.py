@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-# WPSeku - Wordpress Security Scanner
-# by Momo Outaadi (m4ll0k)
-
-import sys 
+"""The WPSeku main part."""
+import sys
 import getopt 
 # import lib
 from lib.scan import *
@@ -20,7 +15,7 @@ from modules.discovery.generic.generic import *
 from modules.fingerprint.fingerprint import *
 
 class wpseku(object):
-	"""WPSeku"""
+	"""WPSeku main object"""
 	kwargs = {
 			 'agent':ragent(),'ragent':False,'redirect':True,
 			  'cookie':None,'proxy':None,'timeout':None,'verbose':False,'headers':{}

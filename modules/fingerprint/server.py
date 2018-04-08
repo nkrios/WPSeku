@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-# WPSeku - Wordpress Security Scanner
-# by Momo Outaadi (m4ll0k)
-
+"""Support for getting the used server daemon."""
 def server(headers):
 	for key in headers.keys():
 		if key.lower() == 'server':

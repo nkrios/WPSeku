@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-# WPSeku - Wordpress Security Scanner
-# by Momo Outaadi (m4ll0k)
-
+"""Support for discovering Wordpress generic parts."""
 from lib.printer import *
 from modules.discovery.generic.wpconfig import *
 from modules.discovery.generic.wpfile import *
