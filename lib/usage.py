@@ -6,7 +6,9 @@
 
 import sys
 from time import strftime
+
 from lib.printer import *
+
 
 def ptime(url):
 	banner()

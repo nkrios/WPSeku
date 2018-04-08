@@ -1,6 +1,7 @@
 """Support for getting the HTTP headers."""
 from lib.printer import *
 
+
 def headers(headers):
 	common_headers = (
 		'Accept','Accept-Charset','Accept-Encoding','Accept-Language',

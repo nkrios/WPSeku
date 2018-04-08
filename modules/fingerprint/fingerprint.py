@@ -1,10 +1,10 @@
 """Support for fingerprint Wordpress."""
 from lib.request import *
-from lib.printer import *
 from modules.fingerprint.cms import *
 from modules.fingerprint.headers import *
 from modules.fingerprint.server import *
 from modules.fingerprint.waf import *
+
 
 class fingerprint(Request):
 	def __init__(self,url,data,kwargs):

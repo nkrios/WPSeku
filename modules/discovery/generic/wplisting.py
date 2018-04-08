@@ -1,10 +1,10 @@
 """Support for discovering Wordpress listings."""
-from re import search,findall,I
-from os.path import join,realpath
-from lib.request import * 
-from lib.printer import *
-from lib.check import *
+from os.path import realpath
+from re import I, search
+
 from lib.readfile import *
+from lib.request import *
+
 
 class wplisting(Request):
 	def __init__(self,url,data,kwargs):

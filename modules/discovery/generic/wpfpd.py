@@ -1,8 +1,8 @@
 """Support for discovering Wordpress path disclosures."""
+from re import I, findall, search
+
 from lib.request import *
-from lib.printer import *
-from lib.check import *
-from re import search,findall,I
+
 
 class wpfpd(Request):
 	def __init__(self,url,data,kwargs):

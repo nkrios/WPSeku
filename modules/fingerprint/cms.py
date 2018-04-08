@@ -1,6 +1,8 @@
 """Support for fingerprinting CMS."""
-from re import search,I
+from re import I, search
+
 from lib.printer import *
+
 
 def wordpress(headers,content):
 	_cms_ = False

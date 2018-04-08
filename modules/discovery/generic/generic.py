@@ -1,5 +1,4 @@
 """Support for discovering Wordpress generic parts."""
-from lib.printer import *
 from modules.discovery.generic.wpconfig import *
 from modules.discovery.generic.wpfile import *
 from modules.discovery.generic.wpfpd import *
@@ -7,6 +6,7 @@ from modules.discovery.generic.wplisting import *
 from modules.discovery.generic.wplogin import *
 from modules.discovery.generic.wprobots import *
 from modules.discovery.generic.wpversion import *
+
 
 def generic(url,data,kwargs):
 	wpfpd(url,data,kwargs).run()

@@ -1,7 +1,6 @@
 """Support for discovering Wordpress logins."""
 from lib.request import *
-from lib.printer import *
-from lib.check import *
+
 
 class wplogin(Request):
 	def __init__(self,url,data,kwargs):

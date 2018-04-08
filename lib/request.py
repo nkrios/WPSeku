@@ -4,11 +4,13 @@
 # WPSeku - Wordpress Security Scanner
 # by Momo Outaadi (m4ll0k)
 
-import urllib3
 import requests
+import urllib3
+
+from lib.check import *
 from lib.printer import *
 from lib.ragent import *
-from lib.check import *
+
 
 class Request(object):
 	def __init__(self,kwarg):
