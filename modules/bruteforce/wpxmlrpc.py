@@ -1,13 +1,14 @@
 """Support for bruteforcing XML-RPC."""
-import sys
 import queue
-from lib.check import *
-from lib.request import *
-from lib.printer import *
-from re import search,I
-from lib.readfile import *
-from threading import Thread,Lock 
+import sys
+from re import I, search
+from threading import Thread
+
 from humanfriendly.tables import format_pretty_table
+
+from lib.readfile import *
+from lib.request import *
+
 
 class XMLRPCBrute(Request):
 	max_thread = int(5)

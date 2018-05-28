@@ -1,6 +1,8 @@
 """Support for detecting Web application firewalls."""
-from re import search,I
+from re import search
+
 from lib.printer import *
+
 
 def wordfence_security(content):
 	if search(decode('/wp-content/plugins/wordfence/'),content):

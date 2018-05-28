@@ -1,18 +1,15 @@
 """The WPSeku main part."""
-import sys
-import getopt 
-# import lib
+import getopt
+
 from lib.scan import *
 from lib.usage import *
-from lib.ragent import *
-from lib.printer import *
-# import modules
 from modules.bruteforce.wpxmlrpc import *
-from modules.discovery.users.wpusers import *
-from modules.discovery.themes.wpthemes import *
-from modules.discovery.plugins.wpplugins import *
 from modules.discovery.generic.generic import *
+from modules.discovery.plugins.wpplugins import *
+from modules.discovery.themes.wpthemes import *
+from modules.discovery.users.wpusers import *
 from modules.fingerprint.fingerprint import *
+
 
 class wpseku(object):
 	"""WPSeku main object"""

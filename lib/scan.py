@@ -4,13 +4,19 @@
 # WPSeku - Wordpress Security Scanner
 # by Momo Outaadi (m4ll0k) and Filippo Conti (b4dnewz)
 
-import re,os
-import sys,time
-import glob,json 
-import json,fnmatch 
+import fnmatch
+import glob
+import json
+import os
+import re
+import sys
+import time
+
+from humanfriendly.tables import format_pretty_table
+
 from lib.printer import *
 from lib.readfile import *
-from humanfriendly.tables import format_pretty_table
+
 
 class Scan:
 	"""

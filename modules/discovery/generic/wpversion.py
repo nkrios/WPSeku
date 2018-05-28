@@ -1,9 +1,9 @@
 """Support for discovering Wordpress versions."""
-from lib.request import *
-from lib.printer import *
-from lib.check import *
 from json import loads
-from re import search,findall,I
+from re import findall
+
+from lib.request import *
+
 
 class wpversion(Request):
 	def __init__(self,url,data,kwargs):

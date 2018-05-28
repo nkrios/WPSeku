@@ -4,8 +4,10 @@
 # WPSeku - Wordpress Security Scanner
 # by Momo Outaadi (m4ll0k)
 
-from lib.printer import *
 from urllib.parse import urlparse
+
+from lib.printer import *
+
 
 def Data(url,data):
 	""" Check url and data path """

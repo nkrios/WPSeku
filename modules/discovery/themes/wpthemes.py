@@ -1,9 +1,9 @@
 """Support for discovering Wordpress themes."""
-from lib.request import *
-from lib.printer import *
-from lib.check import *
 from json import loads
-from re import search,findall,I
+from re import I, findall, search
+
+from lib.request import *
+
 
 class wpthemes(Request):
 	def __init__(self,url,data,kwargs):

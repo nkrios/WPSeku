@@ -1,9 +1,6 @@
 """Support for discovering Wordpress robots."""
-from re import search,findall,I
-from lib.request import * 
-from lib.printer import *
-from lib.check import *
-from lib.readfile import *
+from lib.request import *
+
 
 class wprobots(Request):
 	def __init__(self,url,data,kwargs):

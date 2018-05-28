@@ -6,6 +6,7 @@
 
 from random import randint
 
+
 def ragent():
 	user_agent = (
 		"Mozilla/5.0 (Amiga; U; AmigaOS 1.3; en; rv:1.8.1.19) Gecko/20081204 SeaMonkey/1.1.14",

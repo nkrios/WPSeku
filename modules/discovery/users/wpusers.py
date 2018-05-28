@@ -1,11 +1,11 @@
 """Support for discovering Wordpress users."""
-from json import loads, decoder
-import sys
-from lib.check import *
-from lib.request import * 
-from lib.printer import *
-from re import findall,I
+from json import loads
+from re import I, findall
+
 from humanfriendly.tables import format_pretty_table
+
+from lib.request import *
+
 
 class wpusers(Request):
 	def __init__(self,url,data,kwargs):

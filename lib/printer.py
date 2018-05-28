@@ -6,6 +6,7 @@
 
 from lib.colors import *
 
+
 def decode(string):
 	return string.encode('utf-8')
 

@@ -1,9 +1,9 @@
 """Support for discovering Wordpress configuration."""
-from lib.request import *
-from lib.printer import *
-from lib.check import *
+from os.path import realpath
+
 from lib.readfile import *
-from os.path import join,realpath
+from lib.request import *
+
 
 class wpconfig(Request):
 	def __init__(self,url,data,kwargs):
