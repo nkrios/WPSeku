@@ -83,8 +83,8 @@ class Scan:
 		# check cross-site request forgery
 		vuln = []
 		blacklist = [
-		             'wp_nonce_field\(\S*\)','wp_nonce_url\(\S*\)',
-		             'wp_verify_nonce\(\S*\)','check_admin_referer\(\S*\)'
+		             '^wp_nonce_field\(\S*\)','^wp_nonce_url\(\S*\)',
+		             '^wp_verify_nonce\(\S*\)','^check_admin_referer\(\S*\)'
 		             ]
 		for b in blacklist:
 			b = decode(b)
@@ -98,7 +98,7 @@ class Scan:
 		# check open redirect
 		vuln = []
 		blacklist = [
-					 'wp_redirect\(\S*\)'
+					 '^wp_redirect\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -112,7 +112,7 @@ class Scan:
 		# check php code execution
 		vuln = []
 		blacklist = [
-					  'eval\(\S*\)', 'assert\(\S*\)', 'preg_replace\(\S*\)'
+					  '^eval\(\S*\)', '^assert\(\S*\)', '^preg_replace\(\S*\)'
 					  ]
 		for b in blacklist:
 			b = decode(b)
@@ -126,7 +126,7 @@ class Scan:
 		# check command execution
 		vuln = []
 		blacklist = [
-					 'system\(\S*\)', 'exec\(\S*\)','passthru\(\S*\)','shell_exec\(\S*\)'
+					 '^system\(\S*\)', '^exec\(\S*\)','^passthru\(\S*\)','^shell_exec\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -140,7 +140,7 @@ class Scan:
 		# check authorization hole
 		vuln = []
 		blacklist = [
-					 'is_admin\(\S*\)', 'is_user_admin\(\S*\)'
+					 '^is_admin\(\S*\)', '^is_user_admin\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -154,7 +154,7 @@ class Scan:
 		# check php object injection
 		vuln = []
 		blacklist = [
-					 'unserialize\(\S*\)'
+					 '^unserialize\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -168,8 +168,8 @@ class Scan:
 		# check file inclusion
 		vuln = []
 		blacklist = [
-					 'include\(\S*\)','require\(\S*\)',
-					 'include_once\(\S*\)','require_once\(\S*\)','fread\(\S*\)'
+					 '^include\(\S*\)','^require\(\S*\)',
+					 '^include_once\(\S*\)','^require_once\(\S*\)','^fread\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -183,7 +183,7 @@ class Scan:
 		# check file download
 		vuln = []
 		blacklist = [
-					 'file\(\S*\)', 'readfile\(\S*\)','file_get_contents\(\S*\)'
+					 '^file\(\S*\)', '^readfile\(\S*\)','^file_get_contents\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -197,9 +197,9 @@ class Scan:
 		# check sql injection
 		vuln = []
 		blacklist = [
-					 '\$wpdb->query\(\S*\)','\$wpdb->get_var\(\S*\)','\$wpdb->get_row\(\S*\)','\$wpdb->get_col\(\S*\)',
-					 '\$wpdb->get_results\(\S*\)','\$wpdb->replace\(\S*\)','esc_sql\(\S*\)','escape\(\S*\)','esc_like\(\S*\)',
-					 'like_escape\(\S*\)'
+					 '?\$wpdb->query\(\S*\)','^\$wpdb->get_var\(\S*\)','^\$wpdb->get_row\(\S*\)','^\$wpdb->get_col\(\S*\)',
+					 '?\$wpdb->get_results\(\S*\)','^\$wpdb->replace\(\S*\)',^'esc_sql\(\S*\)','^escape\(\S*\)','^esc_like\(\S*\)',
+					 '^like_escape\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
@@ -213,8 +213,8 @@ class Scan:
 		# check cross-site scripting
 		vuln = []
 		blacklist = [
-					 '\$_GET\[\S*\]','\$_POST\[\S*\]','\$_REQUEST\[\S*\]','\$_SERVER\[\S*\]','\$_COOKIE\[\S*\]',
-					 'add_query_arg\(\S*\)','remove_query_arg\(\S*\)'
+					 '^\$_GET\[\S*\]','^\$_POST\[\S*\]','^\$_REQUEST\[\S*\]','^\$_SERVER\[\S*\]','^\$_COOKIE\[\S*\]',
+					 '^add_query_arg\(\S*\)','^remove_query_arg\(\S*\)'
 					 ]
 		for b in blacklist:
 			b = decode(b)
