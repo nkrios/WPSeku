@@ -91,7 +91,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['csrf'],pattern])
+					vuln.append([line,self.vuln['csrf'],pattern[0]])
 		return vuln
 	
 	def ope(self,code):
@@ -105,7 +105,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['op'],pattern])
+					vuln.append([line,self.vuln['op'],pattern[0]])
 		return vuln
 
 	def pce(self,code):
@@ -119,7 +119,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['pce'],pattern])
+					vuln.append([line,self.vuln['pce'],pattern[0]])
 		return vuln
 	
 	def com(self,code):
@@ -133,7 +133,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['com'],pattern])
+					vuln.append([line,self.vuln['com'],pattern[0]])
 		return vuln
 
 	def auth(self,code):
@@ -147,7 +147,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['auth'],pattern])
+					vuln.append([line,self.vuln['auth'],pattern[0]])
 		return vuln
 
 	def php(self,code):
@@ -161,7 +161,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['php'],pattern])
+					vuln.append([line,self.vuln['php'],pattern[0]])
 		return vuln
 
 	def fin(self,code):
@@ -176,7 +176,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['fi'],pattern])
+					vuln.append([line,self.vuln['fi'],pattern[0]])
 		return vuln
 
 	def fid(self,code):
@@ -190,7 +190,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['fd'],pattern])
+					vuln.append([line,self.vuln['fd'],pattern[0]])
 		return vuln
 	
 	def sql(self,code):
@@ -206,7 +206,7 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(str(b),str(cd),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['sql'],pattern])
+					vuln.append([line,self.vuln['sql'],pattern[0]])
 		return vuln
 
 	def xss(self,code):
@@ -221,5 +221,5 @@ class Scan:
 			for line,cd in enumerate(code):
 				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
-					vuln.append([line,self.vuln['xss'],pattern])
+					vuln.append([line,self.vuln['xss'],pattern[0]])
 		return vuln
