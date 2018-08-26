@@ -89,7 +89,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['csrf'],pattern])
 		return vuln
@@ -103,7 +103,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['op'],pattern])
 		return vuln
@@ -117,7 +117,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['pce'],pattern])
 		return vuln
@@ -131,7 +131,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['com'],pattern])
 		return vuln
@@ -145,7 +145,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['auth'],pattern])
 		return vuln
@@ -159,7 +159,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['php'],pattern])
 		return vuln
@@ -174,7 +174,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['fi'],pattern])
 		return vuln
@@ -188,7 +188,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['fd'],pattern])
 		return vuln
@@ -204,7 +204,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(str(b),str(cd),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['sql'],pattern])
 		return vuln
@@ -219,7 +219,7 @@ class Scan:
 		for b in blacklist:
 			b = decode(b)
 			for line,cd in enumerate(code):
-				pattern = re.findall(b,cd,re.I)
+				pattern = re.findall(b.decode("utf-8"),cd.decode("utf-8"),re.I)
 				if pattern != []:
 					vuln.append([line,self.vuln['xss'],pattern])
 		return vuln
