@@ -55,8 +55,15 @@ class Scan:
 			plus('Scanning directory...')
 			files = self.recursive(source,'*.php')
 			for file in files:
-				info('Scanning %s file'%file)
-				self.testFile(file)
+				try:
+					with open(file, 'tr') as check_file:  # Try open file in text mode
+						check_file.read()
+						info('Scanning %s file'%file)
+						self.testFile(file)
+				except:  # If check_file.read fails, then file is non-text (possibly binary)
+					warn("Skipping %s"%file)
+					pass
+
 		else:
 			plus('Scanning file...')
 			file = self.check(source)
